@@ -1,0 +1,207 @@
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 34px;
+    }
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 28;
+        box-shadow: 0 0 5px 0 #00000036;
+    }
+    .main {
+        padding-top: 142px;
+    }
+    .header__wrapper-burger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        background: #F8F8F8;
+        z-index: 5;
+        padding: 60px 30px 30px;
+        transition: all 0.5s;
+        overflow: auto;
+        max-height: 100vh;
+        max-width: 300px;
+        -webkit-box-shadow: 0 0 10px 1px rgb(0 0 0 / 20%);
+        box-shadow: 0 0 10px 1px rgb(0 0 0 / 20%);
+        flex-wrap: nowrap!important;
+    }
+    .header__wrapper-burger .header-menu__link:not(:first-child) {
+        margin-top: 15px;
+    }
+    .header__burger {
+        display: block;
+        width: 30px;
+        height: 22px;
+        z-index: 6;
+        position: relative;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: black;
+        border-radius: 1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 10px;
+        transition: all 0.7s;
+    }
+    .header__burger:after, .header .header__burger:before {
+        content: "";
+        background-color: black;
+        border-radius: 1px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s;
+    }
+    .header__burger:before {
+        top: 0;
+    }
+    .header__burger:after {
+        bottom: 0;
+    }
+    .header-bottom {
+        justify-content: space-between;
+    }
+    .header-btn--catalog--desktop {
+        display: none;
+    }
+    .header-search--desktop {
+        display: none;
+    }
+    .header-btn--catalog--mobile {
+        display: flex;
+        margin-top: 20px;
+        min-height: 48px;
+    }
+    .header-search--mobile {
+        display: block;
+        margin: 20px 0 0;
+    }
+    .header-search--mobile label {
+        min-height: 48px;
+    }
+    .header-logo {
+        margin-right: 10px;
+        height: 44px;
+    }
+
+
+    body.burger .header__wrapper-burger {
+        right: 0;
+    }
+    body.burger .header__burger:before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    body.burger .header__burger:after {
+        transform: rotate(-45deg);
+        bottom: 12px;
+    }
+    body.burger .header__burger span {
+        transform: scale(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 30px;
+    }
+
+    .order {
+        padding-bottom: 60px;
+    }
+    .order-form__block {
+        padding: 25px 15px;
+        margin-top: 20px;
+    }
+    .cart-total {
+        padding: 25px 15px;
+    }
+    .order-accordion .accordion-button {
+        padding: 0 15px;
+    }
+    .order-accordion .accordion-body {
+        padding: 15px 15px 0;
+    }
+    .cart-table__price {
+        width: 70px;
+        font-size: 14px;
+    }
+    .cart-table__price--discount span {
+        font-size: 12px;
+    }
+    .cart-table__img {
+        width: 50px;
+        height: 50px;
+    }
+    .cart-table__body tr th {
+        padding: 15px 10px 15px 0;
+    }
+    .cart-table__body tr td {
+        padding: 15px 10px;
+    }
+    .cart-table__padding-right {
+        padding-right: 15px!important;
+    }
+    .cart-table__padding-left {
+        padding-left: 15px!important;
+    }
+
+    .order-row {
+        --bs-gutter-y: 30px;
+    }
+    .order-form .row {
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 20px;
+    }
+    .order-form .form-control {
+        padding: 10px 15px;
+    }
+    .order-form .form-floating label {
+        padding: 10px 15px;
+    }
+    .order-form .form-floating>.form-control-plaintext~label, .order-form .form-floating>.form-control:focus~label, .order-form .form-floating>.form-control:not(:placeholder-shown)~label, .order-form .form-floating>.form-select~label {
+        transform: scale(.85) translateY(-0.1rem) translateX(0);
+    }
+
+
+
+    .footer {
+        background-size: 50%;
+    }
+    .footer-middle .row>div {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 50px 0 30px;
+    }
+    .footer-logo {
+        height: 40px;
+        margin-top: 30px;
+    }
+    .footer-title {
+        font-size: 36px;
+    }
+    .footer-title::after {
+        display: none;
+    }
+    .footer-middle {
+        margin: 40px 0;
+    }
+    .footer-bottom {
+        padding-top: 30px;
+    }
+}

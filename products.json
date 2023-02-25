@@ -1,0 +1,28 @@
+[
+  {
+    "id":1,
+    "name":"Lorem ipsum dolor sit amet consectetur. Duis",
+    "code":"L434-GH43",
+    "quantity":1,
+    "pricePerOne":220,
+    "imageName":"product1.png"
+  },
+  {
+    "id":2,
+    "name":"Lorem ipsum dolor sit amet",
+    "code":"L434-GH44",
+    "quantity":2,
+    "pricePerOne":250,
+    "imageName":"product2.png"
+  },
+  {
+    "id":3,
+    "name":"Lorem ipsum dolor sit amet consectetur. Dictum venenatis porta at mus sit congue mi ultrices metus. Egestas varius morbi dictumst at egestas amet egestas. Lacus metus netus aliquet ac ipsum pulvinar amet.",
+    "code":"L434-GH45",
+    "quantity":3,
+    "pricePerOne":180,
+    "imageName":"product3.png",
+    "discount":true,
+    "pricePerOneAfterDiscount":150
+  }
+]

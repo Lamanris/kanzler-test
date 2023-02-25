@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Burger</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-top__bg">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between header-top">
+                <nav class="d-flex flex-wrap header-menu header__wrapper-burger">
+                    <a href="#" class="header-menu__link">Каталог</a>
+                    <a href="#" class="header-menu__link">Акции</a>
+                    <a href="#" class="header-menu__link">Популярные товары</a>
+                    <a href="#" class="header-menu__link">Новинки</a>
+                    <a href="#" class="header-menu__link">Новости</a>
+                    <a href="#" class="header-menu__link">О компании</a>
+                    <a href="#" class="header-menu__link">Контакты</a>
+                    <button type="button" class="header-btn--catalog header-btn--catalog--mobile">
+                        <img src="images/icons/squaresIcon.svg" alt="Квадраты">
+                        <span>Каталог</span>
+                        <img src="images/icons/arrowIcon.svg" alt="Стрелка">
+                    </button>
+                    <div class="header-search header-search--mobile">
+                        <label>
+                            <img class="header-search__icon" src="images/icons/zoomIcon.svg" alt="Лупа">
+                            <input placeholder="Найти товар" id="headerSearch1" type="text" class="header-search__input">
+                        </label>
+                    </div>
+                </nav>
+                <div class="d-flex header-top__right">
+                    <a class="d-flex align-items-center header-mail header-top__right-link" href="mailto:info@kanzler.kg">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#333333">
+                            <path d="M6.42979 6.89563L6.42988 6.89553L6.42104 6.88812L2.3757 3.5H12.6036L8.48263 6.88508L8.4692 6.89611L8.45657 6.90804L7.48753 7.82383L6.42979 6.89563ZM1.5 4.07097L5.38339 7.32345L1.5 11.6744V4.07097ZM13.5 4.05778V11.6847L9.52418 7.32364L13.5 4.05778ZM8.77345 7.98448L12.4342 12H2.54979L6.14287 7.97429L7.17021 8.87581L7.51247 9.17617L7.84343 8.8634L8.77345 7.98448Z"/>
+                        </svg>
+                        <span>info@Kanzler.kg</span>
+                    </a>
+                    <a class="d-flex align-items-center header-phone header-top__right-link" href="#">
+                        <img src="images/icons/phoneIcon.svg" alt="Телефон">
+                        <span>Позвонить</span>
+                        <img src="images/icons/arrowIcon.svg" alt="Стрелка">
+                    </a>
+                </div>
+                <div class="header__burger"><span></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex align-items-center flex-wrap header-bottom">
+            <a href="#" class="header-logo">
+                <img src="images/icons/logo.svg" alt="Логотип">
+            </a>
+            <button type="button" class="header-btn--catalog header-btn--catalog--desktop">
+                <img src="images/icons/squaresIcon.svg" alt="Квадраты">
+                <span>Каталог</span>
+                <img src="images/icons/arrowIcon.svg" alt="Стрелка">
+            </button>
+            <div class="header-search header-search--desktop">
+                <label>
+                    <img class="header-search__icon" src="images/icons/zoomIcon.svg" alt="Лупа">
+                    <input placeholder="Найти товар" id="headerSearch" type="text" class="header-search__input">
+                </label>
+                <div class="header-search__results"></div>
+            </div>
+            <div class="d-flex header-bottom__controls">
+                <button type="button" class="header-btn header-btn--cart">
+                        <span class="header-btn--cart__img">
+                            <img src="images/icons/cartIcon.svg" alt="Корзина">
+                            <span class="header-btn--cart__counter">0</span>
+                        </span>
+                </button>
+                <button type="button" class="header-btn header-btn--profile">
+                    <img src="images/icons/profileIcon.svg" alt="Профиль">
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a href="#" class="breadcrumbs__link">Корзина</a>
+            <span class="breadcrumbs__divider">/</span>
+            <a href="#" class="breadcrumbs__link">Оформление заказа</a>
+        </div>
+        <div class="order">
+            <h1 class="page-title">Оформление заказа</h1>
+            <form action="#" class="order-form">
+                <div class="row order-row">
+                    <div class="col-xl-8">
+                        <div class="accordion order-accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button block-title" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                        Корзина (3)
+                                        <span class="order-accordion-button__arrow">
+                                    <img src="images/icons/arrowIconBlack.svg" alt="Стрелка">
+                                </span>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <table class="table cart-table">
+                                            <thead class="cart-table__head">
+                                            <tr>
+                                                <th scope="col">Фото</th>
+                                                <th scope="col" class="cart-table__padding-right">Название</th>
+                                                <th scope="col" class="cart-table__padding-left cart-table__padding-right">Артикул</th>
+                                                <th scope="col" class="cart-table__padding-left cart-table__padding-right">Кол-во</th>
+                                                <th scope="col" class="cart-table__padding-left">Цена</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="cart-table__body" id="cartTableBody"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-form__block">
+                            <h3 class="block-title">Оформление заказа</h3>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderName" placeholder="Имя">
+                                        <label for="orderName">Имя</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderSurname" placeholder="Фамилия">
+                                        <label for="orderSurname">Фамилия</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-8">
+                                    <div class="form-floating">
+                                        <input required type="number" class="form-control" id="orderPhone" placeholder="+996">
+                                        <label for="orderPhone">Телефон</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 col-4">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="orderDob" placeholder="0">
+                                        <label for="orderDob">Доб.</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="email" class="form-control" id="orderEmail" placeholder="name@example.com">
+                                        <label for="orderEmail">E-mail</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="orderPhonePlus" placeholder="+996">
+                                        <label for="orderPhonePlus">Доп телефон или whatsapp</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-form__block">
+                            <h3 class="block-title">Я</h3>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="orderRadioUserType" id="orderRadioUserType1" checked>
+                                <label class="form-check-label" for="orderRadioUserType1">
+                                    Физическое лицо
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="orderRadioUserType" id="orderRadioUserType2">
+                                <label class="form-check-label" for="orderRadioUserType2">
+                                    Юридическое лицо
+                                </label>
+                            </div>
+                        </div>
+                        <div class="order-form__block">
+                            <h3 class="block-title">Доставка</h3>
+                            <div class="order-form__shipment-method">
+                                <h6 class="block-subtitle">Способ доставки</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="orderRadioShippingType" id="orderRadioShippingType1" checked>
+                                    <label class="form-check-label" for="orderRadioShippingType1">
+                                        Физическое лицо
+                                    </label>
+                                    <a href="#">
+                                        режим работы магазина
+                                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" stroke="#5178DC" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7L4 4L1 1"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="orderRadioShippingType" id="orderRadioShippingType2">
+                                    <label class="form-check-label" for="orderRadioShippingType2">
+                                        Юридическое лицо
+                                    </label>
+                                    <a href="#">
+                                        условия доставки
+                                        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" stroke="#5178DC" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 7L4 4L1 1"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h6 class="block-subtitle">Адрес доставки</h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderShipCountry" placeholder="Страна">
+                                        <label for="orderShipCountry">Страна</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderShipCity" placeholder="Фамилия">
+                                        <label for="orderShipCity">Город</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderShipStreet" placeholder="Улица">
+                                        <label for="orderShipStreet">Улица</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="orderShipApartment" placeholder="Квартира">
+                                        <label for="orderShipApartment">Квартира</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input required type="text" class="form-control" id="orderShipHouse" placeholder="Дом">
+                                        <label for="orderShipHouse">Дом</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-form__shipment-comment">
+                                <h6 class="block-subtitle">Указать домофон, этаж, подъезд и комментарий к адресу</h6>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Комментарий" id="orderShipComment" style="height: 62px"></textarea>
+                                    <label for="orderShipComment">Комментарий</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 relative">
+                        <div class="cart-total">
+                            <h6 class="cart-total__title">Стоимость заказа</h6>
+                            <div class="d-flex justify-content-between cart-total__item">
+                                <span>Товары(<span id="cartProductsQuantity">0</span>)</span>
+                                <p id="cartProductsPrice">0c</p>
+                            </div>
+                            <div class="d-flex justify-content-between cart-total__item">
+                                <span>Доставка</span>
+                                <p>Бесплатно</p>
+                            </div>
+                            <div class="cart-total__divider"></div>
+                            <div class="d-flex justify-content-between cart-total__sum">
+                                <span>Итого</span>
+                                <p id="cartTotalPrice">0с</p>
+                            </div>
+                            <button type="submit" class="cart-btn">
+                                Подтвердить заказ
+                            </button>
+                            <p class="cart-total__cond">Подтверждая заказ, я принимаю условия <br> <a href="#">пользовательского соглашения</a></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-title">
+            <a href="#">Kanzler&Bürger</a>
+        </div>
+        <div class="footer-middle">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="footer-column">
+                        <h6 class="footer-column__title">Меню</h6>
+                        <a href="#" class="footer-column__link">Каталог</a>
+                        <a href="#" class="footer-column__link">Акции</a>
+                        <a href="#" class="footer-column__link">Популярные товары</a>
+                        <a href="#" class="footer-column__link">Новинки</a>
+                        <a href="#" class="footer-column__link">Новости</a>
+                        <a href="#" class="footer-column__link">О компании</a>
+                        <a href="#" class="footer-column__link">Контакты</a>
+                        <div class="footer-logo">
+                            <img src="images/icons/logo.svg" alt="Логотип">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer-column">
+                        <h6 class="footer-column__title">Категории</h6>
+                        <a href="#" class="footer-column__link">Бумага</a>
+                        <a href="#" class="footer-column__link">Письмо и графика</a>
+                        <a href="#" class="footer-column__link">Канц товары</a>
+                        <a href="#" class="footer-column__link">Художественные товары</a>
+                        <a href="#" class="footer-column__link">Творчество</a>
+                        <a href="#" class="footer-column__link">Полиграфические материалы</a>
+                        <a href="#" class="footer-column__link">Распродажи</a>
+                        <a href="#" class="footer-column__link">Офисное  оборудование</a>
+                        <a href="#" class="footer-column__link">Игры и игрушки</a>
+                        <a href="#" class="footer-column__link">Сувенирная продукция</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer-column footer-column--contacts">
+                        <h6 class="footer-column__title">Контакты</h6>
+                        <p class="footer-column__subtitle">Огонбаева, 222</p>
+                        <a href="tel:+996777902233" class="footer-column__link">
+                            <img src="images/icons/footerPhoneIcon.svg" alt="Иконка">
+                            0777 90 22 33
+                        </a>
+                        <a href="tel:+996312902233" class="footer-column__link">
+                            <img src="images/icons/footerPhoneHomeIcon.svg" alt="Иконка">
+                            0312 90 22 33
+                        </a>
+                        <p class="footer-column__subtitle">Эркиндик, 7</p>
+                        <a href="tel:+996777902234" class="footer-column__link">
+                            <img src="images/icons/footerPhoneIcon.svg" alt="Иконка">
+                            0777 90 22 34
+                        </a>
+                        <a href="tel:+996312902234" class="footer-column__link">
+                            <img src="images/icons/footerPhoneHomeIcon.svg" alt="Иконка">
+                            0312 90 22 34
+                        </a>
+                        <p class="footer-column__subtitle">Уметалиева, 84</p>
+                        <a href="tel:+996777902236" class="footer-column__link">
+                            <img src="images/icons/footerPhoneIcon.svg" alt="Иконка">
+                            0777 90 22 36
+                        </a>
+                        <a href="tel:+996312902236" class="footer-column__link">
+                            <img src="images/icons/footerPhoneHomeIcon.svg" alt="Иконка">
+                            0312 90 22 36
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer-column footer-column--socials">
+                        <div>
+                            <h6 class="footer-column__title">Мы в соц сетях</h6>
+                            <a href="https://instagram.com/Kanzler" target="_blank" class="footer-column__link">
+                                <img src="images/icons/instaIcon.svg" alt="Иконка">
+                                Instagram
+                            </a>
+                            <a href="https://facebook.com/Kanzler" target="_blank" class="footer-column__link">
+                                <img src="images/icons/fbIcon.svg" alt="Иконка">
+                                Facebook
+                            </a>
+                            <a href="https://whatsapp.com/Kanzler" target="_blank" class="footer-column__link">
+                                <img src="images/icons/waIcon.svg" alt="Иконка">
+                                What’s App
+                            </a>
+                        </div>
+                        <a href="https://to-moore.com/" target="_blank" class="moore-logo">
+                            <img src="images/icons/mooreLogo.svg" alt="Moore Studio">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Kanzler & Burger (c) 2017. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
